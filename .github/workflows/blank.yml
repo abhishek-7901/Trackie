@@ -32,12 +32,12 @@ jobs:
           pr1_response = $(curl -X POST \
             -H "Authorization: token $GITHUB_TOKEN" \
             -H "Accept: application/vnd.github.v3+json" \
-            -d {
+            -d '{
               "head": "release to main",
               "base": "main",
               "title": "release to main automated",
               "body": "testing of automated pull request mechanism" 
-            }
+            }'
             "https://api.github.com/repos/r1/pulls")
 
           pr2_response = $(curl -X POST \
